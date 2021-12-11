@@ -1,0 +1,46 @@
+{
+	"name": "shop-book-ejs-express",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"formatcode": "prettier --single-quote --trailing-comma all --tab-width 4 --write './**/*.{js,json,scss}'",
+		"start": "nodemon --inspect index.js",
+		"sasstocss": "node-sass resources/scss/main.scss public/css/main.css -w",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"express",
+		"ejs",
+		"node",
+		"scss"
+	],
+	"author": "Jason",
+	"license": "ISC",
+	"lint-staged": {
+		"./**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"express-ejs-layouts": "^2.5.1",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.2",
+		"method-override": "^3.0.0",
+		"mongoose": "^6.0.14",
+		"mongoose-slug-generator": "^1.0.4",
+		"morgan": "^1.10.0",
+		"node-sass": "^6.0.1",
+		"nodemon": "^2.0.15",
+		"path": "^0.12.7",
+		"prettier": "^2.5.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.0"
+	}
+}

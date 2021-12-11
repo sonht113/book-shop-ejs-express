@@ -1,0 +1,84 @@
+.banner {
+	background: url('/img/banner-bg.jpg') no-repeat;
+	background-size: cover;
+	width: 100%;
+	gap: 1.5rem;
+	.banner-content {
+		.row{
+			margin-right: 0 !important;
+		}
+		padding-top: 4rem;
+		text-align: center;
+		.content {
+			padding-top: 3rem;
+			h3{
+				text-transform: uppercase;
+			}
+		}
+		.books-slider {
+			flex: 1 1 42rem;
+			text-align: center;
+			width: 80%;
+			.swiper-wrapper{
+				a {
+					img {
+						max-width: 100%;
+						object-fit: cover;
+						transition: 0.5s;
+					} 
+					&:hover img {
+						transform: scale(.9);
+					}
+				}
+			}
+			.stand{
+				width: 100%;
+				margin-top: -0.5rem;
+			}
+		}
+	}
+}
+
+
+
+// FEATURED BOOKS
+// ===================================
+// Subscribe section
+.subscribe-section {
+	background:url(/img/letter-bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	form{
+		max-width: 40%;
+		margin-left: auto;
+		padding: 5rem 1rem;
+	}
+}
+
+// ===================================
+// ARRIVALS
+.arrivals {
+	.arrivals-slider {
+		.box{
+			margin:1rem 0;
+			border: 0.5px solid black;
+			.image{
+				img{
+					height: 10rem;
+				}
+			}
+			.content{
+				h5{
+					text-transform: capitalize;
+					font-weight: bold;
+				}
+			}
+
+			&:hover {
+				border-radius: 0;
+				color: #198754;
+			}
+		}
+	}
+}
