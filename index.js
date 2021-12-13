@@ -37,6 +37,9 @@ app.get('/profile', (req, res) => {
 app.get('/about', (req, res) => {
 	res.render('about', {title: 'About || FM Book Shop'})
 })
+app.get('/book-detail', (req, res) => {
+	res.render('book-detail', {title: 'Read book || FM Book Shop'})
+})
 
 // Route init
 //route(app);
