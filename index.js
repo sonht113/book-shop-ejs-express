@@ -1,7 +1,10 @@
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const routes = require('./routes');
 const expressLayouts = require('express-ejs-layouts');
+const ApiError = require('./util/ApiError');
+const httpStatus = require('http-status');
 const app = express();
 const port = 8080;
 
@@ -15,7 +18,7 @@ db.connect();
 app.use(methodOverride('_method'));
 
 // Middleware xử lý body trong form để gửi lên Database 
-// app.use(express.urlencoded());
+app.use(express.urlencoded());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -27,19 +30,22 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('layout', './layouts/full-width');
 
-app.get('/', (req, res) => {
-	res.render('index', {title: 'FM Book Shop'})
+app.get('/register', (req, res) => {
+	res.render('register', {title: 'Register', layout: './layouts/login'})
 })
 
-app.get('/profile', (req, res) => {
-	res.render('profile', {title: 'Profile || FM Book Shop'})
+app.get('/login', (req, res) => {
+	res.render('login', {title: 'Login', layout: './layouts/login'})
 })
-app.get('/about', (req, res) => {
-	res.render('about', {title: 'About || FM Book Shop'})
+app.get('/404', (req, res) => {
+	res.render('error', {title: '404 || Not found', layout: './layouts/error-page'})
 })
-app.get('/book-detail', (req, res) => {
-	res.render('book-detail', {title: 'Read book || FM Book Shop'})
-})
+app.use(routes)
+// send back a 404 error for any unknown api request
+app.use((req, res, next) => {
+	next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
+});
+
 
 // Route init
 //route(app);

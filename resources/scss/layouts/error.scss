@@ -1,0 +1,24 @@
+.error{
+	width:1000px;
+	margin:0 auto;
+	.logo{
+		width:430px;
+		position:absolute;
+		top:25%;
+		left:35%;
+		p a{
+			color:#eee;
+			font-size:13px;
+			margin-left:30px;
+			padding:5px;
+			background:#FF3366;
+			text-decoration:none;
+			-webkit-border-radius:.3em;
+			-moz-border-radius:.3em;
+			border-radius:.3em;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

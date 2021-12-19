@@ -26,10 +26,13 @@
 		}
 	},
 	"dependencies": {
+		"bcrypt": "^5.0.1",
 		"ejs": "^3.1.6",
 		"express": "^4.17.1",
 		"express-ejs-layouts": "^2.5.1",
+		"http-status": "^1.5.0",
 		"husky": "^7.0.4",
+		"joi": "^17.5.0",
 		"lint-staged": "^12.1.2",
 		"method-override": "^3.0.0",
 		"mongoose": "^6.0.14",

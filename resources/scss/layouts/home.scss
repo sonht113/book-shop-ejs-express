@@ -23,6 +23,7 @@
 				a {
 					img {
 						max-width: 100%;
+						height: 200px;
 						object-fit: cover;
 						transition: 0.5s;
 					} 
@@ -42,6 +43,20 @@
 
 
 // FEATURED BOOKS
+.featured {
+	.price {
+		margin-bottom: 1.5rem;
+	}
+	a{
+		padding: 0.6rem 2rem;
+		color: #000;
+		border-radius: 0.2rem;
+		background-color: $color-shop;
+		&:hover {
+			color: white;
+		}
+	}
+}
 // ===================================
 // Subscribe section
 .subscribe-section {

@@ -1,0 +1,68 @@
+.book-detail {
+	background-color: rgba($color: #000000, $alpha: 0.2);
+	.image__book-detail {
+		padding: 20px 0;
+		border-right: 2px solid gray;
+		img {
+			padding: 0 1rem;
+		}
+	}
+	.info__book-detail {
+		padding-top: 3rem;
+		padding-left: 2rem;
+		.name-book {
+			font-weight: 300;
+			letter-spacing: 4px;
+			color: $color-shop;
+		}
+		.author-book {
+			letter-spacing: 2px;
+		}
+	}
+	.area-content__book-detail {
+		padding-bottom: 5rem;
+	}
+	.price__book-detail {
+		margin-bottom: 3rem;
+		padding-left: 2rem;
+		h5{
+			background: rgb(4,54,4);
+			background: linear-gradient(90deg, rgba(4,54,4,1) 0%, rgba(80,149,103,1) 100%);
+			padding: 10px 20px;
+			text-align: center;
+			color: $color-white;
+			margin-top: 3rem;
+			border-radius: 5px;
+		}
+	}
+	.count__book-detail {
+		padding-left: 2rem;
+		padding-top: 1rem;
+		.count {
+			border: 1px solid grey;
+		}
+		.input-count-book {
+			width: 40px;
+			border: 1px solid grey;
+			&:focus {
+				outline: none;
+			}
+		}
+		input[type="text"] {
+			text-align: center;
+		}
+	}
+
+	.buy__book-detail {
+		margin-left: 2rem;
+		margin-top: 2rem;
+		padding: 0.8rem 7rem;
+		border: none;
+		border-radius: 5px;
+		background-color: #f44734;
+		transition: 0.3s;
+		&:hover {
+			background-color: $color-shop;
+		}
+	}
+}

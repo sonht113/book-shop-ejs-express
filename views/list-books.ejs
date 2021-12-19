@@ -1,0 +1,49 @@
+<div class="container-fluid" style="margin-top: 100px;"> <div class="card">
+		<div class="card-header">
+			<div class="row">
+				<div class="col-8">
+					<h4 class="text-center" style="font-weight: bold;">All Book</h4>
+				</div>
+				<div class="col-4">
+					<a href="/admin-list-books/create-book" class="btn btn-success" style="float: right;"><i
+																		 class="fa fa-plus mr-1"></i>Add Book</a>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<table class="table table-sm table-bordered table-hover table-dark table-striped">
+				<thead class="table-dark text-center text-success text-uppercase">
+					<tr>
+						<th scope="col">Name book</th>
+						<th scope="col">Author</th>
+						<th scope="col">Link image</th>
+						<th scope="col">Description</th>
+						<th scope="col">Price</th>
+						<th scope="col">Count</th>
+						<th scope="col">Options</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% books.forEach(function(book){ %>
+					<tr>
+						<td><%- book.nameBook %></td>
+						<td><%- book.author %></td>
+						<td><%- book.imageBook %></td>
+						<td><%- book.description %></td>
+						<td><%- book.price %></td>
+						<td><%- book.count %></td>
+						<td>
+							<div class="d-flex justify-content-around">
+								<a href="/admin-list-books/update-book/<%- book.id %>" class="btn btn-sm btn-warning"><i
+															 class="fa fa-edit"></i></a>
+								<a href="/admin-list-books/delete-book/<%- book.id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+							</div>
+						</td>
+					</tr>
+					<% }) %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

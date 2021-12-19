@@ -1,0 +1,79 @@
+<section class="cart-page mt-5">
+	<h2 class="title-cart text-center">
+		GIỎ HÀNG
+	</h2>
+	<div class="info-cart">
+		<div class="row">
+			<div class="col-md-9 col-lg-9">
+				<div class="info-product">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Sản phẩm</th>
+								<th>Đơn giá</th>
+								<th>Số lượng</th>
+								<th>Thành tiền</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% books.forEach(function(book) { %>
+							<tr productitem="<%- book.id %>">
+								<td class="td-row">
+									<div class="info-book d-flex align-items-center">
+										<div class="image-product mx-3">
+											<img src="<%- book.imageBook %>" alt="book">
+										</div>
+										<div class="name">
+											<h5><%- book.nameBook %></h5>
+											<span class="small"><%- book.author %></span>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="price-book">
+										<span class="price__book"><%- book.price %></span>
+										<span>đ</span>
+									</div>
+								</td>
+								<td>
+									<div class="group-input">
+										<button class="count count-minus" productId="<%- book.id %>"
+											onclick="decrease(this)">
+											<i class="fas fa-minus"></i>
+										</button>
+										<input type="text" id="inputCountBook" min="1" class="input-count-book"
+											value="1">
+										<button class="count count-plus" productId="<%- book.id %>" class="plus"
+											onclick="crease(this)">
+											<i class="fas fa-plus"></i>
+										</button>
+									</div>
+								</td>
+								<td>
+									<div class="total-price">
+										<span class="total__price"><%- book.price %></span>
+										<span>đ</span>
+									</div>
+								</td>
+							</tr>
+							<% }) %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<div class="info-user pt-3">
+					<p class="small action">Giao tới</p>
+					<span class="name-user">Trọng Sơn</span>
+					<span class="phone-user">0399187817</span>
+					<p class="address-user">Địa chỉ: Ủy ban nhân dân xã Mỹ Châu</p>
+				</div>
+				<div class="total-all-price mt-5">
+					<span>Tổng cộng: </span>
+					<span class="total__Pay">40000 <span>đ</span></span>
+				</div>
+				<button class="pay mt-5">Thanh toán</button>
+			</div>
+		</div>
+	</div>
+</section>

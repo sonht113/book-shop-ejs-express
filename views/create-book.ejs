@@ -1,0 +1,30 @@
+<div class="container mt-2">
+	<h1 class="text-center">Create Book</h1>
+	<form method="POST" action="/admin-list-books/create-book">
+		<div class="mb-3">
+			<label class="form-label">Name Book</label>
+			<input type="text" class="form-control" name="nameBook" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Author</label>
+			<input type="text" class="form-control" name="author" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Link Image</label>
+			<input type="text" class="form-control" name="imageBook" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Description Book</label>
+			<input type="text" class="form-control" name="description"/>
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Price</label>
+			<input type="number" class="form-control" name="price" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Count</label>
+			<input type="number" class="form-control" name="count" />
+		</div>
+		<button type="submit" class="btn btn-primary">Create</button>
+	</form>
+</div>

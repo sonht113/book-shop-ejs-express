@@ -1,1 +1,24 @@
-<h1>This is page book detail</h1>
+<section class="book-detail container mb-5">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+			<div class="image__book-detail">
+				<img src="<%- book.imageBook %>">
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 area-content__book-detail">
+			<div class="info__book-detail">
+				<h2 class="name-book"><%- book.nameBook %></h2>
+				<h5 class="author-book">Tác giả: <%- book.author %></h5>
+				<p class="descriptin-book">
+					<%- book.description %>
+				</p>
+			</div>
+			<div class="price__book-detail">
+				<h5>Giá: <%- book.price %><span>đ</span></h5>
+			</div>
+			<a href="/cart-book/<%- book.id %>" class="text-dark buy__book-detail my-5">
+				Chọn mua
+			</a>
+		</div>
+	</div>
+</section>

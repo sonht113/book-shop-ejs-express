@@ -1,0 +1,30 @@
+<div class="container mt-2">
+	<h1 class="text-center">Update book Book</h1>
+	<form method="POST" action="/admin-list-books/update-book/<%= book.id %>">
+		<div class="mb-3">
+			<label class="form-label">Name Book</label>
+			<input type="text" class="form-control" value="<%= book.nameBook %>" name="nameBook" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Author</label>
+			<input type="text" class="form-control" value="<%= book.author %>" name="author" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Link image</label>
+			<input type="text" class="form-control" value="<%= book.imageBook %>" name="imageBook" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Description Book</label>
+			<input type="text" class="form-control" value="<%= book.description %>" name="description"/>
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Price</label>
+			<input type="text" class="form-control" value="<%= book.price %>" name="price" />
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Count</label>
+			<input type="text" class="form-control" value="<%= book.count %>" name="count" />
+		</div>
+		<button type="submit" class="btn btn-success">Update</button>
+	</form>
+</div>
