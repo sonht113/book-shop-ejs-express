@@ -11,16 +11,22 @@
 				<thead class="table-dark text-center text-success text-uppercase">
 					<tr>
 						<th scope="col">Name user</th>
-						<th scope="col">Phone</th>
+						<th scope="col">Email</th>
+						<th scope="col">Password</th>
+						<th scope="col">Number Phone</th>
 						<th scope="col">Address</th>
 					</tr>
 				</thead>
 				<tbody>
+					<% users.forEach((user) => { %>
 					<tr>
-						<td>Trong Son</td>
-						<td>1234567890</td>
-						<td>Binh Dinh</td>
+						<td><%- user.fullName %></td>
+						<td><%- user.email %></td>
+						<td><%- user.password %></td>
+						<td><%- user.numberPhone %></td>
+						<td><%- user.address %></td>
 					</tr>
+					<% }) %>
 				</tbody>
 			</table>
 		</div>

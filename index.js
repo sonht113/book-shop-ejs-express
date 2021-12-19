@@ -40,6 +40,9 @@ app.get('/login', (req, res) => {
 app.get('/404', (req, res) => {
 	res.render('error', {title: '404 || Not found', layout: './layouts/error-page'})
 })
+app.get('/read-book', (req, res) => {
+	res.render('read-book', {title: 'Read book || FM Book Shop'})
+})
 app.use(routes)
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
